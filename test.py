@@ -12,7 +12,14 @@ class TestTweetText(unittest.TestCase):
     # This is called immediately before calling each test method
     def setUp(self):
         self.text = idle_text()
-
+	
+	#print
+	#print('\nHUHUHUHUHUHU\n'+ idle_text() )
+	
+	def test_math1(self):
+		response = reply({'text':'2','user':{'screen_name':'TestUser'}})
+		self.assertTrue("2" in response)
+	
     def test_start(self):
         # In order to test something, we use one of the assert*()
         # methods provided by the TestCase base class
